@@ -15,8 +15,8 @@ public class ToDoUser {
     private String email;
     private String username;
     private String password;
-    @OneToMany
+/*    @OneToMany
     @JoinColumn(name = "to_do_user_id")
-    private List<ToDoList> toDoLists;
+    private List<ToDoList> toDoLists;*/
 }
 

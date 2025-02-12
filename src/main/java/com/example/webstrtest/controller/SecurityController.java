@@ -70,7 +70,6 @@
         ResponseEntity<?> signin(@RequestBody SigninRequest signinRequest){
             Authentication authentication;
             try{
-                // в оригинале было "(password, password)"
                 authentication = this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(signinRequest.getUsername(), signinRequest.getPassword()));
             } catch (BadCredentialsException e){
                 return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);

@@ -11,6 +11,7 @@ public interface ToDoUserRepository extends JpaRepository<ToDoUser, Long> {
 
     Optional<ToDoUser> findUserById(Long id);
     Optional<ToDoUser> findUserByUsername(String username);
+    Optional<ToDoUser> findUserByEmail(String email);
     Boolean existsByUsername(String username);
     Boolean existsByEmail(String email);
 }
